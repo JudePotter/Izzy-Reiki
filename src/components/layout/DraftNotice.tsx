@@ -24,7 +24,7 @@ export function DraftNotice() {
   if (dismissed) return null;
 
   return (
-    <div className="relative z-50 bg-terracotta-deep px-6 py-4 text-white">
+    <div className="relative z-50 bg-espresso px-6 py-4 text-white">
       <div className="mx-auto flex max-w-4xl items-center justify-center gap-4 text-center">
         <p className="text-sm leading-relaxed sm:text-base">
           This is the first iteration — we have lots more to come if you like

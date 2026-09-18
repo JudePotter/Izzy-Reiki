@@ -44,12 +44,12 @@ export function Header() {
               className="group relative text-sm tracking-wide text-earthy-green/80 transition-colors hover:text-earthy-green"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-terracotta transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-espresso-light transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </nav>
 
-        <Button href={whatsAppUrl()} className="text-xs sm:text-sm">
+        <Button href={whatsAppUrl()} icon={false} className="text-xs sm:text-sm">
           Book now
         </Button>
       </div>

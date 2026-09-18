@@ -37,7 +37,7 @@ export const mdxComponents: MDXComponents = {
   ),
   a: (props) => (
     <a
-      className="text-terracotta-deep underline decoration-terracotta/40 underline-offset-4 hover:decoration-terracotta"
+      className="text-espresso underline decoration-espresso-light/40 underline-offset-4 hover:decoration-espresso-light"
       {...props}
     />
   ),

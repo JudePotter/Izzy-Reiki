@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 const backgrounds = {
   white: "bg-white text-earthy-green",
   cream: "bg-cream text-earthy-green",
+  sage: "bg-sage/30 text-earthy-green",
   dark: "bg-earthy-green text-white",
 } as const;
 

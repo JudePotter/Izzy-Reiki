@@ -2,8 +2,8 @@ import { homeCopy } from "@/content/copy/home";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
-import { PlaceholderCopy } from "@/components/ui/PlaceholderCopy";
 
+/** The five-second pitch from the copy doc — Izzy's own words, verbatim. */
 export function IntroSection() {
   const { intro } = homeCopy;
 
@@ -16,7 +16,9 @@ export function IntroSection() {
           </h2>
         </BrushReveal>
         <Reveal delay={0.2} className="mt-8">
-          <PlaceholderCopy />
+          <p className="text-base font-light leading-relaxed text-earthy-green/85">
+            {intro.pitch}
+          </p>
         </Reveal>
       </div>
     </Section>

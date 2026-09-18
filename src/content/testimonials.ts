@@ -1,9 +1,10 @@
 /**
- * PLACEHOLDER TESTIMONIALS — don't worry, these aren't real reviews.
- * Written in the voice of typical Google reviews for a reiki practitioner,
- * purely to prove out the testimonial card design. Once the real Google
- * profile is accessible, hand-pick and swap in Izzy's actual best reviews —
- * curated by hand here, not pulled live, per the brief.
+ * Curated testimonials pulled from Izzy's real Google reviews. None are
+ * supplied yet — the copy doc only confirms the aggregate rating (5.0), not
+ * individual review text — so this stays empty and the Reviews section
+ * renders clearly-labelled placeholder cards instead of inventing quotes.
+ * Once Izzy's Google profile is accessible, hand-pick 3–6 of her best
+ * reviews and add them here as { name, quote } (context optional).
  */
 
 export type Testimonial = {
@@ -12,20 +13,4 @@ export type Testimonial = {
   context?: string;
 };
 
-export const testimonials: Testimonial[] = [
-  {
-    name: "Sarah M.",
-    quote:
-      "I went in feeling completely wired and left an hour later feeling like myself again. Izzy has such a calming presence — I've never relaxed so quickly.",
-  },
-  {
-    name: "James T.",
-    quote:
-      "Genuinely one of the most restorative hours of my week. Beautifully held space, no rushing, and I always sleep well afterwards.",
-  },
-  {
-    name: "Priya K.",
-    quote:
-      "I was sceptical about reiki before my first session. Izzy explained everything gently and I came away feeling lighter than I have in months.",
-  },
-];
+export const testimonials: Testimonial[] = [];

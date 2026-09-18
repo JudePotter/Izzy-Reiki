@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { homeCopy } from "@/content/copy/home";
-import { whatsAppUrl } from "@/lib/whatsapp";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
-import { Button } from "@/components/ui/Button";
+import { ConsultationForm } from "@/components/home/ConsultationForm";
 
 /**
  * The big closing "book here" moment — full-width, warm, hero-energy band
@@ -38,7 +37,7 @@ export function ClosingCtaBand() {
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-10">
-            <Button href={whatsAppUrl()}>{closingBand.ctaLabel}</Button>
+            <ConsultationForm />
           </div>
         </Reveal>
       </div>

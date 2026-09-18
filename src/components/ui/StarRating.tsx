@@ -6,8 +6,8 @@ function Star({ filled, index, animate }: { filled: boolean; index: number; anim
   const path = (
     <path
       d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6L10 1.5Z"
-      fill={filled ? "#d56907" : "none"}
-      stroke="#d56907"
+      fill={filled ? "#7a5f47" : "none"}
+      stroke="#7a5f47"
       strokeWidth="1"
     />
   );

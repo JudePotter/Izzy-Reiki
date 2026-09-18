@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { homeCopy } from "@/content/copy/home";
 import { treatments } from "@/content/treatments";
+import { bookTreatmentUrl } from "@/lib/whatsapp";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
@@ -28,16 +30,42 @@ export function ServicesTeaser() {
       <div className="mt-14 grid gap-6 sm:grid-cols-3">
         {treatments.map((treatment, i) => (
           <Reveal key={treatment.slug} delay={i * 0.1}>
-            <Link href={`/services#${treatment.slug}`} className="block h-full">
-              <HoverLift className="border border-earthy-green/10 bg-cream/60 p-8 text-center">
+            <HoverLift className="group overflow-hidden border border-earthy-green/10 bg-cream/60">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={treatment.image}
+                  alt={treatment.name}
+                  fill
+                  sizes="(min-width: 640px) 33vw, 90vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="flex flex-col items-center p-7 text-center">
                 <p className="font-display text-2xl font-light text-earthy-green">
                   {treatment.name}
                 </p>
-                <p className="mt-2 text-sm text-earthy-green/70">
-                  {treatment.shortLabel}
-                </p>
-              </HoverLift>
-            </Link>
+                <p className="mt-1 text-sm text-earthy-green/70">{treatment.shortLabel}</p>
+
+                <div className="mt-6 flex w-full items-center justify-center gap-3">
+                  <Button href={bookTreatmentUrl(treatment.name)} icon={false}>
+                    Book
+                  </Button>
+                  <Link
+                    href="/services#treatments"
+                    className="group inline-flex items-center gap-1 text-xs uppercase tracking-[0.2em] text-earthy-green/60 hover:text-earthy-green"
+                  >
+                    Details
+                    <span
+                      aria-hidden
+                      className="transition-transform duration-300 group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </HoverLift>
           </Reveal>
         ))}
       </div>

@@ -2,10 +2,13 @@
 
 /*
   Divine Align Healing — design tokens.
-  Palette per brief (exact hexes). `--color-terracotta-deep` is a purpose-built
-  darker shade for solid CTA fills only, so white-on-terracotta buttons clear
-  WCAG AA (4.5:1) — the brief's own #d56907 only clears AA at large-text/UI-component
-  size (3:1), so it stays reserved for icons, underlines, borders and large type.
+  Terracotta is dropped per Izzy's revised brief: nudes, beiges and espresso
+  browns, with more of the lighter sage. `--color-espresso` (#4A3728, her
+  exact hex) clears WCAG AA for white text at 11.2:1, so it doubles as the
+  solid CTA fill and the general warm accent, used sparingly and never as a
+  large fill. `--color-espresso-light` is a lifted tone for hover states and
+  small decorative accents (underlines, star fills) where full-strength
+  espresso would read too heavy.
 */
 :root {
   --color-white: #f8f5f0;
@@ -13,8 +16,8 @@
   --color-earthy-green: #3c4e40;
   --color-green: #6d8450;
   --color-sage: #d1d7ab;
-  --color-terracotta: #d56907;
-  --color-terracotta-deep: #b85a06;
+  --color-espresso: #4a3728;
+  --color-espresso-light: #7a5f47;
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-jost);
@@ -26,8 +29,8 @@
   --color-earthy-green: var(--color-earthy-green);
   --color-green: var(--color-green);
   --color-sage: var(--color-sage);
-  --color-terracotta: var(--color-terracotta);
-  --color-terracotta-deep: var(--color-terracotta-deep);
+  --color-espresso-light: var(--color-espresso-light);
+  --color-espresso: var(--color-espresso);
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);

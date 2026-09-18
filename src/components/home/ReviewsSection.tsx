@@ -7,7 +7,12 @@ import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { HoverLift } from "@/components/ui/HoverLift";
 import { StarRating } from "@/components/ui/StarRating";
+import { PlaceholderCopy } from "@/components/ui/PlaceholderCopy";
 import { Button } from "@/components/ui/Button";
+
+// Show real curated reviews once they exist; until then, three clearly
+// labelled placeholder slots rather than inventing reviewer names/quotes.
+const placeholderSlots = testimonials.length > 0 ? testimonials : [1, 2, 3];
 
 export async function ReviewsSection() {
   const { reviews } = homeCopy;
@@ -36,19 +41,30 @@ export async function ReviewsSection() {
       </div>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-3">
-        {testimonials.map((t, i) => (
-          <Reveal key={t.name} delay={i * 0.1}>
-            <HoverLift className="bg-white p-8">
-              <StarRating value={5} />
-              <p className="mt-4 text-sm leading-relaxed text-earthy-green/85">
-                “{t.quote}”
-              </p>
-              <p className="mt-6 text-xs uppercase tracking-wide text-green">
-                {t.name}
-              </p>
-            </HoverLift>
-          </Reveal>
-        ))}
+        {testimonials.length > 0
+          ? testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={i * 0.1}>
+                <HoverLift className="bg-white p-8">
+                  <StarRating value={5} />
+                  <p className="mt-4 text-sm leading-relaxed text-earthy-green/85">
+                    “{t.quote}”
+                  </p>
+                  <p className="mt-6 text-xs uppercase tracking-wide text-green">{t.name}</p>
+                </HoverLift>
+              </Reveal>
+            ))
+          : placeholderSlots.map((slot, i) => (
+              <Reveal key={slot as number} delay={i * 0.1}>
+                <HoverLift className="bg-white p-8">
+                  <StarRating value={5} />
+                  <div className="mt-4">
+                    <PlaceholderCopy compact>
+                      This is where one of your curated Google reviews will go, Izzy
+                    </PlaceholderCopy>
+                  </div>
+                </HoverLift>
+              </Reveal>
+            ))}
       </div>
 
       <Reveal delay={0.3} className="mt-12 text-center">

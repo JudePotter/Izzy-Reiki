@@ -111,7 +111,7 @@ export default async function BlogPostPage({
           </p>
           <a
             href={`mailto:${siteConfig.contact.email}`}
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-terracotta-deep px-7 py-3 text-sm text-white transition-colors hover:bg-terracotta"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-espresso px-7 py-3 text-sm text-white transition-colors hover:bg-espresso-light"
           >
             Enquire
           </a>

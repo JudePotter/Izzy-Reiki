@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { Button } from "@/components/ui/Button";
-import { GalleryGrid } from "@/components/gallery/GalleryGrid";
+import { FeaturedGalleryGrid } from "@/components/home/FeaturedGalleryGrid";
 
 export function GallerySection() {
   const { gallery } = homeCopy;
@@ -26,7 +26,7 @@ export function GallerySection() {
       </div>
 
       <div className="mt-14">
-        <GalleryGrid images={images} />
+        <FeaturedGalleryGrid images={images} />
       </div>
 
       <Reveal delay={0.3} className="mt-12 text-center">

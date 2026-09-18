@@ -21,7 +21,7 @@ export function Highlight({ children }: { children: ReactNode }) {
         <motion.path
           d="M2 8.5C40 2 90 1 130 6C155 9.5 175 5 198 8"
           fill="none"
-          stroke="var(--color-terracotta)"
+          stroke="var(--color-espresso-light)"
           strokeWidth="4"
           strokeLinecap="round"
           initial={{ pathLength: 0 }}

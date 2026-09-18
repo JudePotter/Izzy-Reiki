@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/content/site-config";
 import { whatsAppUrl } from "@/lib/whatsapp";
-import { BrushDivider } from "@/components/ui/BrushDivider";
 
 function InstagramIcon() {
   return (
@@ -44,17 +43,38 @@ function WhatsAppIcon() {
 
 export function Footer() {
   return (
-    <footer className="relative bg-earthy-green text-white">
-      <BrushDivider into="dark" flip className="absolute -top-16 sm:-top-24" />
-
+    <footer className="bg-earthy-green text-white">
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
-        <div className="grid gap-12 sm:grid-cols-3">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <p className="font-display text-2xl">{siteConfig.businessName}</p>
             <p className="mt-3 max-w-xs text-sm text-white/75">
               {siteConfig.tagline}, based in {siteConfig.location.town},{" "}
               {siteConfig.location.region}.
             </p>
+          </div>
+
+          <div>
+            <p className="text-sm tracking-wide text-white/60">Find us</p>
+            <p className="mt-3 max-w-[16rem] text-sm text-white/85">
+              Inside Renume Wellness
+              <br />
+              {siteConfig.location.addressLine}
+              <br />
+              {siteConfig.location.town}, {siteConfig.location.postcode}
+            </p>
+          </div>
+
+          <div>
+            <p className="text-sm tracking-wide text-white/60">Opening hours</p>
+            <ul className="mt-3 space-y-1 text-sm text-white/85">
+              {siteConfig.hours.map((row) => (
+                <li key={row.day} className="flex justify-between gap-4">
+                  <span>{row.day}</span>
+                  <span className="text-white/70">{row.hours}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

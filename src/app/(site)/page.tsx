@@ -1,24 +1,24 @@
 import { Hero } from "@/components/home/Hero";
 import { IntroSection } from "@/components/home/IntroSection";
 import { ServicesTeaser } from "@/components/home/ServicesTeaser";
-import { GallerySection } from "@/components/home/GallerySection";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
+import { StoryTeaser } from "@/components/home/StoryTeaser";
 import { SocialSection } from "@/components/home/SocialSection";
+import { GallerySection } from "@/components/home/GallerySection";
 import { ClosingCtaBand } from "@/components/home/ClosingCtaBand";
-import { BrushDivider } from "@/components/ui/BrushDivider";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <BrushDivider into="cream" />
       <IntroSection />
       <ServicesTeaser />
-      <BrushDivider into="cream" />
-      <GallerySection />
+      <WhyChooseUs />
       <ReviewsSection />
+      <StoryTeaser />
       <SocialSection />
-      <BrushDivider into="dark" />
+      <GallerySection />
       <ClosingCtaBand />
     </>
   );
