@@ -1,17 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/content/site-config";
-import { whatsAppUrl } from "@/lib/whatsapp";
-import { Button } from "@/components/ui/Button";
 import { AnimatedLogo } from "@/components/layout/AnimatedLogo";
+import { BookNowMenu } from "@/components/layout/BookNowMenu";
 
-/**
- * Blog, Reviews, Corporate and Contact are parked to later phases (see the
- * brief), so nav stays to the three pages that exist this pass.
- */
 const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Treatments" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Journal" },
 ];
 
 export function Header() {
@@ -49,9 +46,7 @@ export function Header() {
           ))}
         </nav>
 
-        <Button href={whatsAppUrl()} icon={false} className="text-xs sm:text-sm">
-          Book now
-        </Button>
+        <BookNowMenu className="text-xs sm:text-sm" />
       </div>
 
       {/* Mobile nav — simple inline row under the header bar, no menu/JS needed at this size. */}

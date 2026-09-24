@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { homeCopy } from "@/content/copy/home";
 import { treatments } from "@/content/treatments";
-import { bookTreatmentUrl } from "@/lib/whatsapp";
+import { whatsAppUrl } from "@/lib/whatsapp";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
@@ -37,6 +37,7 @@ export function ServicesTeaser() {
                   alt={treatment.name}
                   fill
                   sizes="(min-width: 640px) 33vw, 90vw"
+                  style={treatment.imagePosition ? { objectPosition: treatment.imagePosition } : undefined}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
@@ -48,8 +49,13 @@ export function ServicesTeaser() {
                 <p className="mt-1 text-sm text-earthy-green/70">{treatment.shortLabel}</p>
 
                 <div className="mt-6 flex w-full items-center justify-center gap-3">
-                  <Button href={bookTreatmentUrl(treatment.name)} icon={false}>
-                    Book
+                  <Button
+                    href={whatsAppUrl(
+                      `Hi, I would like to book ${treatment.name}. Please let me know your availability.`,
+                    )}
+                    icon={false}
+                  >
+                    Book on WhatsApp
                   </Button>
                   <Link
                     href="/services#treatments"

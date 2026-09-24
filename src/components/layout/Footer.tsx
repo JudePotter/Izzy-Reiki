@@ -49,8 +49,8 @@ export function Footer() {
           <div>
             <p className="font-display text-2xl">{siteConfig.businessName}</p>
             <p className="mt-3 max-w-xs text-sm text-white/75">
-              {siteConfig.tagline}, based in {siteConfig.location.town},{" "}
-              {siteConfig.location.region}.
+              I&rsquo;m a complementary therapist and reiki master, based in{" "}
+              {siteConfig.location.town}, {siteConfig.location.region}.
             </p>
           </div>
 
@@ -87,12 +87,17 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/services" className="text-white/85 hover:text-white">
-                  Services
+                  Treatments
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="text-white/85 hover:text-white">
                   Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-white/85 hover:text-white">
+                  Journal
                 </Link>
               </li>
               <li>

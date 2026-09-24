@@ -61,6 +61,14 @@ export const galleryImages: GalleryImage[] = [
   { src: "/images/travelling-2.jpeg", alt: "A calming natural scene" },
   { src: "/images/travelling-3.jpeg", alt: "A calming natural scene" },
   { src: "/images/travelling-4.jpeg", alt: "A calming natural scene" },
+  { src: "/images/crystals-1.jpeg", alt: "Crystals, oracle cards and a candle in the treatment room" },
+  { src: "/images/crystals-2.jpeg", alt: "A crystal collection laid out on a brass tray" },
+  { src: "/images/crystals-3.jpeg", alt: "Crystals and a Buddha statue on the treatment room shelf" },
+  { src: "/images/crystals-4.jpeg", alt: "A candle and oracle cards in the treatment room" },
+  { src: "/images/bells-1.jpeg", alt: "Tingsha bells used for sound healing" },
+  { src: "/images/mala-1.jpeg", alt: "A mala bead necklace resting on a Buddha hand ornament" },
+  { src: "/images/bells-2.jpeg", alt: "Izzy holding tingsha bells before a treatment" },
+  { src: "/images/sage-1.jpeg", alt: "A sage smudge stick held over the crystal tray" },
 ];
 
 export function getFeaturedGalleryImages() {

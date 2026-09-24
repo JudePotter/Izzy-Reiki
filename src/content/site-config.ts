@@ -36,16 +36,36 @@ export const siteConfig = {
 
   contact: {
     email: "doddizz21@hotmail.com",
+    // Public Web3Forms access key for the backup contact form (Fixes Round 1
+    // §10) — Web3Forms keys are designed to be exposed client-side, rate-
+    // limited per domain on their end. Get Izzy's own key free at
+    // https://web3forms.com (enter her email, they send the key — no
+    // account needed), then set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in
+    // .env.local (and again in Vercel's env vars for production). Left
+    // blank until then — the form shows a "still being wired up" note and
+    // falls back to the WhatsApp button instead of submitting nowhere.
+    web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
   },
 
-  // WhatsApp click-to-chat is the primary CTA sitewide. The number itself is
-  // never printed as visible text anywhere on the site (per Jude — only
-  // "WhatsApp" / "Book" labels are shown); it only ever appears inside a
-  // wa.me link. Overridable via NEXT_PUBLIC_WHATSAPP_NUMBER (E.164 digits,
-  // no "+") if the number ever needs to change without a code deploy.
+  // WhatsApp click-to-chat is the primary CTA sitewide (Fixes Round 1, §1 —
+  // it now carries more weight than the contact form, which is a backup).
+  // The number itself is never printed as visible text anywhere on the site
+  // (per Jude — only "WhatsApp" / "Book" labels are shown); it only ever
+  // appears inside a wa.me link. Overridable via NEXT_PUBLIC_WHATSAPP_NUMBER
+  // (E.164 digits, no "+") if the number ever needs to change without a
+  // code deploy.
   whatsapp: {
     number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "447908142122",
-    defaultMessage: "Hi, I'd like to book a free consultation. Please send me your availability, thanks!",
+    // Generic sitewide message (header, hero, sticky button, footer) — kept
+    // treatment-neutral and deliberately doesn't say "free consultation",
+    // since the brief reserves that phrasing for the dedicated consultation
+    // CTA below, not every button on the site.
+    defaultMessage: "Hi, I'd like to book a session with you. Please let me know your availability.",
+    // Exact wording from the brief §5 — used only by the dedicated
+    // free-consultation CTA (closing band) and the "not sure yet" contact
+    // form option, never as a generic button label sitewide.
+    consultationMessage:
+      "Hi, I'd like to book a free consultation to chat through which treatment is right for me. Please let me know your availability.",
   },
 
   social: {
@@ -55,7 +75,7 @@ export const siteConfig = {
     },
     facebook: {
       handle: "Divine Align Healing",
-      url: "https://www.facebook.com/divinealignreiki",
+      url: "https://www.facebook.com/divinealignhealing/",
     },
   },
 

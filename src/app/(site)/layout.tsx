@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { DraftNotice } from "@/components/layout/DraftNotice";
+import { StickyWhatsApp } from "@/components/layout/StickyWhatsApp";
 import { siteConfig } from "@/content/site-config";
 
 // LocalBusiness + AggregateRating JSON-LD. Geo coordinates aren't confirmed
@@ -76,6 +77,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <StickyWhatsApp />
     </>
   );
 }

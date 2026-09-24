@@ -1,15 +1,13 @@
 import type { ServiceItem } from "@/content/services";
-import { bookTreatmentUrl } from "@/lib/whatsapp";
+import { whatsAppUrl } from "@/lib/whatsapp";
 import { Reveal } from "@/components/ui/Reveal";
 import { HoverLift } from "@/components/ui/HoverLift";
-import { PlaceholderCopy } from "@/components/ui/PlaceholderCopy";
 import { Button } from "@/components/ui/Button";
 
 /**
- * One treatment or package row — name, duration and real pricing from the
- * copy doc, a short description slot (placeholder only, since the copy doc
- * doesn't give per-treatment descriptions yet), and a Book button that opens
- * the WhatsApp per-treatment flow.
+ * One treatment or package row — name, duration, real pricing and
+ * description from the brief, and a Book button that opens WhatsApp
+ * pre-filled with this item's exact booking message.
  */
 export function ServiceCard({ item, delay = 0 }: { item: ServiceItem; delay?: number }) {
   return (
@@ -24,13 +22,11 @@ export function ServiceCard({ item, delay = 0 }: { item: ServiceItem; delay?: nu
           {item.duration}
         </p>
 
-        <div className="mt-5">
-          <PlaceholderCopy compact>This is where your copy will go, Izzy</PlaceholderCopy>
-        </div>
+        <p className="mt-5 text-sm leading-relaxed text-earthy-green/80">{item.description}</p>
 
         <div className="mt-6">
-          <Button href={bookTreatmentUrl(item.name)} icon={false} className="w-full sm:w-auto">
-            Book
+          <Button href={whatsAppUrl(item.whatsappMessage)} icon={false} className="w-full sm:w-auto">
+            Book on WhatsApp
           </Button>
         </div>
       </HoverLift>

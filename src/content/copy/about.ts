@@ -8,13 +8,17 @@
  */
 
 export const aboutCopy = {
-  eyebrow: "About Izzy",
-  heading: "Izzy's story",
+  eyebrow: "About me",
+  heading: "My story",
   story: [
     "From a young age, I've always felt that I have a healing presence within me, and I've always been deeply drawn to helping others reconnect with themselves. Reiki is the path that finally brought all of that together for me. I first tried Reiki for myself, not knowing how deeply it would resonate. The experience was so calming and transformative that I felt a strong calling to learn it — not just for me, but so that I could help others too.",
     "I then studied to become a certified Reiki Master, training all three levels in the heart of Ubud, Bali. Reiki became the doorway into exploring energy work alongside bodywork, which is when I took an interest in and studied the grounding and relaxing practices of massage and reflexology.",
   ],
-  approachHeading: "Her approach",
+  approachHeading: "My approach",
   credentialsHeading: "Credentials",
-  credential: "Certified Reiki Master — all three levels, trained in Ubud, Bali.",
+  credentials: [
+    "Level 3 Diploma in Body Massage",
+    "Level 3 Diploma in Reflexology",
+    "Certified Reiki Master, trained all three levels in Ubud, Bali",
+  ],
 } as const;

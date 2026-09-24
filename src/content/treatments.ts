@@ -10,6 +10,7 @@ export type Treatment = {
   name: string;
   shortLabel: string;
   image: string;
+  imagePosition?: string;
 };
 
 export const treatments: Treatment[] = [
@@ -29,6 +30,7 @@ export const treatments: Treatment[] = [
     slug: "reiki",
     name: "Reiki",
     shortLabel: "Energy healing",
-    image: "/images/04B3BD65-99E8-45F7-AB31-7774FCB142C1_1_201_a.jpeg",
+    image: "/images/ECCA2D45-C0D0-4564-9482-02B06EAD5DC4_1_105_c.jpeg",
+    imagePosition: "center 65%",
   },
 ];

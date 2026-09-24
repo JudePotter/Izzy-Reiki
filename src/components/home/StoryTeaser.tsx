@@ -15,11 +15,11 @@ export function StoryTeaser() {
         <Reveal>
           <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] md:mx-auto">
             <Image
-              src="/images/portrait-2.jpeg"
-              alt="Izzy in her treatment space"
+              src="/images/portrait-1.jpeg"
+              alt="Izzy, the practitioner behind Divine Align Healing"
               fill
-              sizes="(min-width: 768px) 30vw, 80vw"
-              className="object-cover"
+              sizes="(min-width: 768px) 33vw, 90vw"
+              className="object-cover object-[62%_55%]"
             />
           </div>
         </Reveal>

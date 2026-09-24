@@ -27,7 +27,7 @@ export default function ServicesPage() {
           <Reveal delay={0.3}>
             <p className="mt-6 text-base font-light leading-relaxed text-earthy-green/80">
               Every price is here so booking is one tap away. Not sure what&rsquo;s
-              right for you? Book a free consultation and we&rsquo;ll talk it
+              right for you? Book a free consultation and I&rsquo;ll talk it
               through first.
             </p>
           </Reveal>

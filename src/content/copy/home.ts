@@ -12,10 +12,10 @@
 export const homeCopy = {
   hero: {
     eyebrow: "Clophill, Bedfordshire, UK",
-    headingLine1: "Your local space for",
-    headingLine2: "mind, body & soul",
+    headingLine1: "Creating space for people",
+    headingLine2: "to be held, healed and heard.",
     subhead: "Complementary therapist and reiki master",
-    primaryCta: "Book a free consultation",
+    primaryCta: "Book on WhatsApp",
     secondaryCta: "Learn more",
   },
   intro: {
@@ -27,6 +27,11 @@ export const homeCopy = {
     heading: "Treatments",
     body: "Three ways to slow down and be looked after.",
     ctaLabel: "View all treatments",
+  },
+  packagesTeaser: {
+    heading: "Signature Packages",
+    body: "For the deepest reset, my packages weave two treatments into one unhurried session. They're the heart of what I do, more time, more care, and the space to fully let go. Book a single treatment when you need it, or a package when you want the full experience.",
+    ctaLabel: "View all packages",
   },
   whyChooseUs: {
     heading: "Why choose us",
@@ -47,19 +52,19 @@ export const homeCopy = {
   },
   reviews: {
     heading: "Loved, locally",
-    body: "Kind words from clients who've spent time in Izzy's care.",
+    body: "Kind words from clients who've spent time in my care.",
     ctaLabel: "Read all reviews on Google",
   },
   storyTeaser: {
-    eyebrow: "Our story",
-    heading: "Izzy's story",
+    eyebrow: "A little about me",
+    heading: "My story",
     excerpt:
       "From a young age, I've always felt that I have a healing presence within me, and I've always been deeply drawn to helping others reconnect with themselves. Reiki is the path that finally brought all of that together for me.",
-    ctaLabel: "Read Izzy's story",
+    ctaLabel: "Read my story",
   },
   social: {
     heading: "Follow along",
-    body: "Gentle reminders, session insights and behind-the-scenes moments, over on Instagram and Facebook.",
+    body: "I share gentle reminders, session insights and behind-the-scenes moments over on Instagram and Facebook.",
   },
   gallery: {
     heading: "Gallery of work",
@@ -68,6 +73,7 @@ export const homeCopy = {
   },
   closingBand: {
     heading: "Elevate your wellbeing",
-    body: "Leave your name and number below and Izzy will text you back to arrange a call — free, no pressure, just a chat about what might help.",
+    body: "The fastest way to book is WhatsApp — message me directly and I'll reply with my availability. Not sure what's right for you? Book a free consultation and talk it through first.",
+    formIntro: "Prefer to leave your details instead? A quick form, and I'll get back to you.",
   },
 } as const;

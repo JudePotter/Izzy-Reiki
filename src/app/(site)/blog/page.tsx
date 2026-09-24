@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Journal",
   description: `Reiki, rest and wellbeing notes from ${siteConfig.practitionerName} at ${siteConfig.businessName}.`,
 };
 
@@ -20,7 +20,7 @@ export default function BlogIndexPage() {
           Notes
         </p>
         <h1 className="mt-4 font-display text-5xl font-light text-earthy-green sm:text-6xl">
-          The blog
+          Journal
         </h1>
         <p className="mt-6 text-base font-light leading-relaxed text-earthy-green/80">
           Reflections on reiki, rest and wellbeing — added to gently over

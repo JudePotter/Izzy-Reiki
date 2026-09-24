@@ -106,8 +106,7 @@ export default async function BlogPostPage({
             Curious what a session feels like?
           </h2>
           <p className="mt-4 text-base font-light text-earthy-green/80">
-            Send a note — {siteConfig.practitionerName} replies personally to
-            every enquiry.
+            Send a note — I reply personally to every enquiry.
           </p>
           <a
             href={`mailto:${siteConfig.contact.email}`}

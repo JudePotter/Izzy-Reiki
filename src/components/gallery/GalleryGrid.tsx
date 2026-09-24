@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 /** A tasteful, slightly organic grid — every third tile runs tall for rhythm. */
 export function GalleryGrid({ images }: { images: GalleryImage[] }) {
   return (
-    <div className="grid auto-rows-[12rem] grid-cols-2 gap-4 sm:auto-rows-[14rem] sm:grid-cols-3 md:gap-6">
+    <div className="grid auto-rows-[12rem] grid-cols-2 gap-4 [grid-auto-flow:dense] sm:auto-rows-[14rem] sm:grid-cols-3 md:gap-6">
       {images.map((image, i) => (
         <Reveal
           key={image.src}
