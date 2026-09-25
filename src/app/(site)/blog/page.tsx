@@ -4,6 +4,7 @@ import { siteConfig } from "@/content/site-config";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { Botanical } from "@/components/ui/Botanical";
 
 export const metadata: Metadata = {
   title: "Journal",
@@ -14,7 +15,20 @@ export default function BlogIndexPage() {
   const posts = getAllPosts();
 
   return (
-    <Section bg="white" innerClassName="pb-20 pt-16 sm:pb-28 sm:pt-24">
+    <Section
+      bg="white"
+      innerClassName="pb-20 pt-16 sm:pb-28 sm:pt-24"
+      className="relative isolate overflow-x-clip"
+    >
+      <Botanical
+        src="vine-02.svg"
+        left="547px"
+        top="-252px"
+        width="328px"
+        rotate={64}
+        opacity={0.55}
+        colorToken="rose"
+      />
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-sm uppercase tracking-[0.25em] text-green">
           Notes

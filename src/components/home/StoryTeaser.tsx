@@ -4,13 +4,23 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { Button } from "@/components/ui/Button";
+import { Botanical } from "@/components/ui/Botanical";
 
 /** A short pull from Izzy's story, with a link through to the full About page. */
 export function StoryTeaser() {
   const { storyTeaser } = homeCopy;
 
   return (
-    <Section bg="white">
+    <Section bg="white" className="relative isolate overflow-x-clip">
+      <Botanical
+        src="vine-03.svg"
+        left="560px"
+        top="-390px"
+        width="320px"
+        rotate={78}
+        opacity={0.55}
+        colorToken="rose"
+      />
       <div className="grid items-center gap-12 md:grid-cols-[2fr_3fr]">
         <Reveal>
           <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] md:mx-auto">

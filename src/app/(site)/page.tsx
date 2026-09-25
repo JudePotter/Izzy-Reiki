@@ -16,15 +16,12 @@ export default function Home() {
       <Hero />
       <IntroSection />
       <PackagesTeaser />
-      <SectionSeam from="from-cream" to="to-white" variant="leaf" />
       <ServicesTeaser />
       <SectionSeam from="from-white" to="to-sage/30" variant="vine" />
       <WhyChooseUs />
-      <SectionSeam from="from-sage/30" to="to-cream" variant="leaf" />
       <ReviewsSection />
       <StoryTeaser />
       <SocialSection />
-      <SectionSeam from="from-white" to="to-cream" variant="flower" />
       <GallerySection />
       <ClosingCtaBand />
     </>

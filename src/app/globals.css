@@ -18,6 +18,10 @@
   --color-sage: #d1d7ab;
   --color-espresso: #4a3728;
   --color-espresso-light: #7a5f47;
+  /* Decoration-only accent for the botanical line art (vines/flowers), signed
+     off separately from the brand palette above — not for use on text, fills
+     or UI chrome. */
+  --color-botanical-rose: #a8646a;
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-jost);
@@ -31,6 +35,7 @@
   --color-sage: var(--color-sage);
   --color-espresso-light: var(--color-espresso-light);
   --color-espresso: var(--color-espresso);
+  --color-botanical-rose: var(--color-botanical-rose);
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
@@ -96,4 +101,20 @@ h4 {
 ::selection {
   background: var(--color-sage);
   color: var(--color-earthy-green);
+}
+
+/*
+  Line-art decorations from /public/botanical-pack, colour-masked per
+  placement. Split in two: the outer .botanical-piece (rendered by the
+  Botanical component) owns position/rotation/opacity/fade, this inner layer
+  owns only the shape mask + colour, so a fade-to-transparent gradient on the
+  outer element composites cleanly with the SVG mask on this one.
+*/
+.botanical-shape {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--botanical);
+  -webkit-mask: var(--src) no-repeat center / contain;
+  mask: var(--src) no-repeat center / contain;
 }

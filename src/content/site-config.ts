@@ -66,6 +66,9 @@ export const siteConfig = {
     // form option, never as a generic button label sitewide.
     consultationMessage:
       "Hi, I'd like to book a free consultation to chat through which treatment is right for me. Please let me know your availability.",
+    // Used only by the Corporate Wellness page's CTAs.
+    corporateMessage:
+      "Hi, I'd like to book a corporate wellness day for my team. Please let me know your availability.",
   },
 
   social: {

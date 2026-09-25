@@ -5,13 +5,31 @@ import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { Button } from "@/components/ui/Button";
 import { FeaturedGalleryGrid } from "@/components/home/FeaturedGalleryGrid";
+import { Botanical } from "@/components/ui/Botanical";
 
 export function GallerySection() {
   const { gallery } = homeCopy;
   const images = getFeaturedGalleryImages();
 
   return (
-    <Section bg="cream" grain>
+    <Section bg="cream" grain className="relative isolate overflow-x-clip">
+      <Botanical
+        src="vine-minimal-02.svg"
+        left="880px"
+        top="10px"
+        width="240px"
+        opacity={0.55}
+        colorToken="rose"
+        flip
+      />
+      <Botanical
+        src="vine-minimal-03.svg"
+        left="1300px"
+        top="-100px"
+        width="200px"
+        opacity={0.55}
+        colorToken="rose"
+      />
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.25em] text-green">

@@ -8,6 +8,7 @@ import { BrushReveal } from "@/components/ui/BrushReveal";
 import { HoverLift } from "@/components/ui/HoverLift";
 import { Highlight } from "@/components/ui/Highlight";
 import { Button } from "@/components/ui/Button";
+import { Botanical } from "@/components/ui/Botanical";
 
 /** Small line icons for each credential — order matches `aboutCopy.credentials`. */
 function MassageIcon() {
@@ -64,7 +65,16 @@ const credentialIcons = [MassageIcon, FootIcon, ReikiIcon];
 export function AboutContent() {
   return (
     <>
-      <Section bg="white" innerClassName="pb-20 pt-16 sm:pb-28 sm:pt-24">
+      <Section bg="white" innerClassName="pb-20 pt-16 sm:pb-28 sm:pt-24" className="relative isolate overflow-x-clip">
+        <Botanical
+          src="flower-head-01.svg"
+          left="-215px"
+          top="-85px"
+          width="390px"
+          rotate={20}
+          opacity={0.55}
+          colorToken="rose"
+        />
         <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
             <Reveal>
@@ -106,7 +116,7 @@ export function AboutContent() {
         </div>
       </Section>
 
-      <Section bg="cream" grain>
+      <Section bg="cream" grain className="relative isolate overflow-x-clip">
         <div className="grid gap-14 md:grid-cols-[3fr_2fr] md:items-start">
           <div>
             <BrushReveal>

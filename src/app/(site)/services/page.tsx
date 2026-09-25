@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { ServiceCard } from "@/components/services/ServiceCard";
+import { Botanical } from "@/components/ui/Botanical";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -34,7 +35,15 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section id="treatments" bg="cream" grain className="scroll-mt-20">
+      <Section id="treatments" bg="cream" grain className="relative isolate scroll-mt-20 overflow-x-clip">
+        <Botanical
+          src="stars-trail-01.svg"
+          left="8px"
+          top="-420px"
+          width="150px"
+          opacity={0.55}
+          colorToken="green"
+        />
         <BrushReveal>
           <h2 className="font-display text-3xl font-light text-earthy-green sm:text-4xl">
             Treatments

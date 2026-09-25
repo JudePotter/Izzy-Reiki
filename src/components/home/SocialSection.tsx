@@ -13,7 +13,7 @@ export function SocialSection() {
   const { social } = homeCopy;
 
   return (
-    <Section bg="white">
+    <Section bg="white" className="relative isolate overflow-x-clip">
       <Reveal className="mx-auto max-w-xl text-center">
         <h2 className="font-display text-4xl font-light text-earthy-green sm:text-5xl">
           {social.heading}

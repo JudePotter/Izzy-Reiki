@@ -8,12 +8,22 @@ import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { HoverLift } from "@/components/ui/HoverLift";
 import { Button } from "@/components/ui/Button";
+import { Botanical } from "@/components/ui/Botanical";
 
 export function ServicesTeaser() {
   const { servicesTeaser } = homeCopy;
 
   return (
-    <Section bg="white">
+    <Section bg="white" className="relative isolate overflow-x-clip">
+      <Botanical
+        src="vine-02.svg"
+        left="535px"
+        top="-841px"
+        width="370px"
+        rotate={90}
+        opacity={0.55}
+        colorToken="rose"
+      />
       <div className="mx-auto max-w-2xl text-center">
         <BrushReveal>
           <h2 className="font-display text-4xl font-light text-earthy-green sm:text-5xl">

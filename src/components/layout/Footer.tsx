@@ -91,6 +91,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/corporate" className="text-white/85 hover:text-white">
+                  Corporate Wellness
+                </Link>
+              </li>
+              <li>
                 <Link href="/gallery" className="text-white/85 hover:text-white">
                   Gallery
                 </Link>

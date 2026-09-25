@@ -7,6 +7,7 @@ import { BookNowMenu } from "@/components/layout/BookNowMenu";
 const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Treatments" },
+  { href: "/corporate", label: "Corporate" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Journal" },
 ];

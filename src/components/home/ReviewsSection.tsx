@@ -14,7 +14,12 @@ export async function ReviewsSection() {
   const rating = await getAggregateRating();
 
   return (
-    <Section bg="cream" grain innerClassName="px-0 py-20 sm:py-28">
+    <Section
+      bg="cream"
+      grain
+      innerClassName="px-0 py-20 sm:py-28"
+      className="relative isolate overflow-x-clip"
+    >
       <div className="mx-auto max-w-2xl px-6 text-center md:px-10">
         <BrushReveal>
           <h2 className="font-display text-4xl font-light text-earthy-green sm:text-5xl">
