@@ -21,16 +21,19 @@ export function Header() {
         data-header-row
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10"
       >
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="min-w-0">
           <AnimatedLogo>
             <Image
               src="/images/logos/divine-align-logo.jpeg"
               alt={siteConfig.businessName}
               width={40}
               height={40}
-              className="h-10 w-10 rounded-full object-cover"
+              className="h-10 w-10 shrink-0 rounded-full object-cover"
             />
-            <span className="hidden font-display text-lg tracking-wide text-earthy-green sm:inline">
+            {/* min-w-0 + truncate: lets this give up space first (rather than
+                the page overflowing) if a very narrow phone ever runs tight
+                against Book/the hamburger — shows the full name otherwise. */}
+            <span className="min-w-0 truncate font-display text-lg tracking-wide text-earthy-green">
               {siteConfig.businessName}
             </span>
           </AnimatedLogo>
@@ -49,7 +52,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-0">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-0">
           <BookNowMenu className="text-xs sm:text-sm" />
           <MobileNavMenu links={navLinks} className="sm:hidden" />
         </div>

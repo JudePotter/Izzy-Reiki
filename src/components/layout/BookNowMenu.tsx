@@ -39,7 +39,7 @@ export function BookNowMenu({ className = "" }: { className?: string }) {
         aria-expanded={open}
         className={`inline-flex items-center gap-1.5 rounded-full bg-espresso px-7 py-3 text-sm tracking-wide text-white transition-colors hover:bg-espresso-light ${className}`}
       >
-        Book now
+        Book
         <svg
           viewBox="0 0 24 24"
           className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
