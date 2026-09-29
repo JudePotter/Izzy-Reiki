@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { siteConfig } from "@/content/site-config";
+import { buildMetadata } from "@/lib/metadata";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { Botanical } from "@/components/ui/Botanical";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Blog",
-  description: `Reiki, rest and wellbeing notes from ${siteConfig.practitionerName} at ${siteConfig.businessName}.`,
-};
+  description: `Reiki, rest and wellbeing notes from ${siteConfig.practitionerName} at ${siteConfig.businessName} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+  path: "/blog",
+});
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();

@@ -41,12 +41,17 @@
   --font-sans: var(--font-sans);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--color-white);
   color: var(--color-earthy-green);
   font-family: var(--font-sans);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /*

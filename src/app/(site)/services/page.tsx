@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import { siteConfig } from "@/content/site-config";
 import { serviceTreatments, servicePackages } from "@/content/services";
+import { buildMetadata } from "@/lib/metadata";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { Botanical } from "@/components/ui/Botanical";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: `Reflexology, massage and reiki with ${siteConfig.practitionerName} at ${siteConfig.businessName}, ${siteConfig.location.town}.`,
-};
+export const metadata = buildMetadata({
+  title: "Reiki, Massage & Reflexology Treatments",
+  description: `Reiki, holistic massage and reflexology prices and packages with ${siteConfig.practitionerName} at ${siteConfig.businessName} — serving ${siteConfig.location.town} and mid-Bedfordshire.`,
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

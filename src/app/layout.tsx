@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     template: `%s — ${siteConfig.businessName}`,
   },
   description: `Reflexology, massage and reiki with ${siteConfig.practitionerName} at ${siteConfig.businessName} — your local space for mind, body & soul in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+  alternates: { canonical: siteConfig.url },
   openGraph: {
     title: siteConfig.businessName,
     description: `${siteConfig.tagline} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.businessName,
     locale: "en_GB",
     type: "website",
+    images: [{ url: "/images/hero-crystals.jpeg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.businessName,
     description: `${siteConfig.tagline} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+    images: ["/images/hero-crystals.jpeg"],
   },
 };
 

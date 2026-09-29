@@ -83,7 +83,7 @@ export function TreatmentPicker({
                   onChange(option);
                   setOpen(false);
                 }}
-                className={`block w-full rounded-xl px-4 py-2.5 text-left text-sm transition-colors ${
+                className={`block w-full rounded-xl px-4 py-3 text-left text-sm transition-colors ${
                   option === value
                     ? "bg-sage/40 text-earthy-green"
                     : "text-earthy-green/80 hover:bg-sage/20"

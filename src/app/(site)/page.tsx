@@ -15,9 +15,9 @@ export default function Home() {
     <>
       <Hero />
       <IntroSection />
+      <SectionSeam from="from-cream" to="to-cream" variant="leaf" />
       <PackagesTeaser />
       <ServicesTeaser />
-      <SectionSeam from="from-white" to="to-sage/30" variant="vine" />
       <WhyChooseUs />
       <ReviewsSection />
       <StoryTeaser />

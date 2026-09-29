@@ -1,27 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { whatsAppUrl } from "@/lib/whatsapp";
 
 /**
  * Persistent floating WhatsApp button — per the brief, WhatsApp is the
  * primary booking route, so it stays reachable from anywhere on the site,
  * not just inline CTAs. Sits above the mobile nav bar and safe-area inset.
+ * Fades out once the footer scrolls into view so it never sits on top of
+ * the footer's own WhatsApp/contact links or the last section's content.
  */
 export function StickyWhatsApp() {
+  const [overFooter, setOverFooter] = useState(false);
+
+  useEffect(() => {
+    const footer = document.getElementById("site-footer");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(([entry]) => setOverFooter(entry.isIntersecting), {
+      rootMargin: "0px 0px -80px 0px",
+    });
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.a
       href={whatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Message Divine Align Healing on WhatsApp"
+      aria-hidden={overFooter}
+      tabIndex={overFooter ? -1 : 0}
       className="fixed right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-espresso text-white shadow-lg shadow-earthy-green/20 transition-colors duration-300 hover:bg-espresso-light"
-      style={{ bottom: "calc(1.25rem + env(safe-area-inset-bottom))" }}
+      style={{
+        bottom: "calc(1.25rem + env(safe-area-inset-bottom))",
+        pointerEvents: overFooter ? "none" : "auto",
+      }}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+      animate={overFooter ? { opacity: 0, y: 12 } : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: overFooter ? 0 : 0.6 }}
     >
       <svg viewBox="0 0 48 48" fill="currentColor" className="h-7 w-7" aria-hidden>
         <path d="M38.9,8.1A20.9,20.9,0,0,0,3.2,22.8,19.8,19.8,0,0,0,6,33.2L3,44l11.1-2.9a20.3,20.3,0,0,0,10,2.5A20.8,20.8,0,0,0,38.9,8.1Zm-14.8,32a17.1,17.1,0,0,1-9.5-2.8L8,39.1l1.8-6.4a17.9,17.9,0,0,1-3.1-9.9A17.4,17.4,0,1,1,24.1,40.1Z" />

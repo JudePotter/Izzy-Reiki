@@ -22,14 +22,28 @@ export async function generateMetadata({
   const post = safeGetPost(slug);
   if (!post) return {};
 
+  const url = `${siteConfig.url}/blog/${slug}`;
+  const images = post.frontmatter.coverImage ? [post.frontmatter.coverImage] : undefined;
+
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt,
+    alternates: { canonical: url },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.excerpt,
-      images: post.frontmatter.coverImage ? [post.frontmatter.coverImage] : undefined,
+      url,
+      siteName: siteConfig.businessName,
+      locale: "en_GB",
+      images,
       type: "article",
+      publishedTime: post.frontmatter.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.frontmatter.title,
+      description: post.frontmatter.excerpt,
+      images,
     },
   };
 }
@@ -83,7 +97,7 @@ export default async function BlogPostPage({
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[2rem]">
               <Image
                 src={frontmatter.coverImage}
-                alt=""
+                alt={frontmatter.title}
                 fill
                 sizes="(min-width: 1024px) 60vw, 90vw"
                 className="object-cover"

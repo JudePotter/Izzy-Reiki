@@ -36,7 +36,7 @@ function WhatsAppIcon() {
 
 export function Footer() {
   return (
-    <footer className="bg-earthy-green text-white">
+    <footer id="site-footer" className="bg-earthy-green text-white">
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div>
@@ -72,7 +72,7 @@ export function Footer() {
 
           <div>
             <p className="text-sm tracking-wide text-white/60">Explore</p>
-            <ul className="mt-3 space-y-2 text-sm">
+            <ul className="mt-1 text-sm">
               <li>
                 <Link href="/about" className="text-white/85 hover:text-white">
                   About
@@ -108,7 +108,7 @@ export function Footer() {
                   href={siteConfig.googleReviewsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/85 hover:text-white"
+                  className="inline-block py-2.5 text-white/85 hover:text-white"
                 >
                   Google reviews
                 </a>
@@ -124,7 +124,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Message Divine Align Healing on WhatsApp"
-                className="group flex items-center gap-2 text-white/85 hover:text-white"
+                className="group flex items-center gap-2 py-2 text-white/85 hover:text-white"
               >
                 <span className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <WhatsAppIcon />
@@ -138,7 +138,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Divine Align Healing on Instagram"
-                className="group flex items-center gap-2 text-white/85 hover:text-white"
+                className="group flex items-center gap-2 py-2 text-white/85 hover:text-white"
               >
                 <span className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <InstagramIcon />
@@ -152,7 +152,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Divine Align Healing on Facebook"
-                className="group flex items-center gap-2 text-white/85 hover:text-white"
+                className="group flex items-center gap-2 py-2 text-white/85 hover:text-white"
               >
                 <span className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <FacebookIcon />

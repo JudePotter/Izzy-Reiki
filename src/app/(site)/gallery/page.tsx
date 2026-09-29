@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
 import { siteConfig } from "@/content/site-config";
 import { galleryImages } from "@/content/gallery";
+import { buildMetadata } from "@/lib/metadata";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { Botanical } from "@/components/ui/Botanical";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Gallery",
-  description: `A look at the space and work behind ${siteConfig.businessName}, ${siteConfig.location.town}.`,
-};
+  description: `A look at the treatment space and Reiki, massage and reflexology sessions behind ${siteConfig.businessName} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+  path: "/gallery",
+  image: "/images/969100C0-56DB-484F-949D-40A2ECDABBDE_1_201_a.jpeg",
+});
 
 export default function GalleryPage() {
   return (

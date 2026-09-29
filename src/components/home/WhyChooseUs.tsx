@@ -18,6 +18,7 @@ export function WhyChooseUs() {
         width="260px"
         opacity={0.55}
         colorToken="green"
+        hideOnMobile
       />
       <Botanical
         src="moon-stars-02.svg"
@@ -27,6 +28,7 @@ export function WhyChooseUs() {
         opacity={0.55}
         colorToken="green"
         flip
+        hideOnMobile
       />
       <div className="mx-auto max-w-2xl text-center">
         <BrushReveal>

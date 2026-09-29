@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { siteConfig } from "@/content/site-config";
 import { whatsAppUrl } from "@/lib/whatsapp";
+import { buildMetadata } from "@/lib/metadata";
 import {
   corporateOptions,
   corporatePackages,
@@ -16,10 +16,12 @@ import { HoverLift } from "@/components/ui/HoverLift";
 import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 
-export const metadata: Metadata = {
-  title: "Corporate Wellness",
-  description: `Bring wellbeing to your workplace with on-site reflexology, massage and reiki from ${siteConfig.practitionerName} at ${siteConfig.businessName}.`,
-};
+export const metadata = buildMetadata({
+  title: "Corporate Wellness Days",
+  description: `Bring wellbeing to your workplace with on-site reflexology, massage and reiki from ${siteConfig.practitionerName} at ${siteConfig.businessName}, serving ${siteConfig.location.town} and mid-Bedfordshire workplaces.`,
+  path: "/corporate",
+  image: "/corporate/5F08753D-2114-4E8C-9918-B720E32B8E55_1_105_c.jpeg",
+});
 
 const brochureHref = "/corporate/divine-align-corporate-wellness.pdf";
 
@@ -81,6 +83,7 @@ export default function CorporatePage() {
                 src="/corporate/5F08753D-2114-4E8C-9918-B720E32B8E55_1_105_c.jpeg"
                 alt="Izzy giving a reflexology treatment in an office setting"
                 fill
+                priority
                 sizes="(min-width: 768px) 50vw, 90vw"
                 className="object-cover"
               />

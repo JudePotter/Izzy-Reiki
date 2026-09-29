@@ -20,7 +20,6 @@ export function HeroParallaxImage() {
           alt=""
           fill
           priority
-          quality={100}
           sizes="100vw"
           className="object-cover object-center opacity-80"
         />

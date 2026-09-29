@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { siteConfig } from "@/content/site-config";
+import { buildMetadata } from "@/lib/metadata";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { Botanical } from "@/components/ui/Botanical";
 import { ClosingCtaBand } from "@/components/home/ClosingCtaBand";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Contact",
-  description: `Get in touch with ${siteConfig.practitionerName} at ${siteConfig.businessName} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
-};
+  description: `Get in touch with ${siteConfig.practitionerName} at ${siteConfig.businessName}, inside Renume Wellness in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+  path: "/contact",
+  image: "/images/renume.webp",
+});
 
 export default function ContactPage() {
   return (
@@ -28,6 +30,7 @@ export default function ContactPage() {
           rotate={12}
           opacity={0.55}
           colorToken="rose"
+          hideOnMobile
         />
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-green">

@@ -51,13 +51,15 @@ export function Header() {
         <BookNowMenu className="text-xs sm:text-sm" />
       </div>
 
-      {/* Mobile nav — simple inline row under the header bar, no menu/JS needed at this size. */}
-      <nav className="flex items-center justify-center gap-6 border-t border-earthy-green/10 py-2 sm:hidden">
+      {/* Mobile nav — simple inline row under the header bar, no menu/JS needed
+          at this size. Wraps rather than scrolling/overflowing now that six
+          links no longer fit on one line at 360–414px. */}
+      <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 border-t border-earthy-green/10 px-4 py-1 sm:hidden">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-xs tracking-wide text-earthy-green/80"
+            className="px-1 py-3.5 text-xs tracking-wide text-earthy-green/80"
           >
             {link.label}
           </Link>

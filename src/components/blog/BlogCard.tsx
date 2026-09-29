@@ -12,7 +12,7 @@ export function BlogCard({ post }: { post: PostSummary }) {
         <div className="relative aspect-[16/10] w-full overflow-hidden">
           <Image
             src={post.coverImage}
-            alt=""
+            alt={post.title}
             fill
             sizes="(min-width: 768px) 33vw, 90vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"

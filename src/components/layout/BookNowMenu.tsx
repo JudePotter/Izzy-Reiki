@@ -83,7 +83,7 @@ export function BookNowMenu({ className = "" }: { className?: string }) {
               rel="noopener noreferrer"
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block rounded-xl px-4 py-2.5 text-sm text-earthy-green transition-colors hover:bg-sage/20"
+              className="block rounded-xl px-4 py-3 text-sm text-earthy-green transition-colors hover:bg-sage/20"
             >
               {item.name}
             </a>
@@ -100,7 +100,7 @@ export function BookNowMenu({ className = "" }: { className?: string }) {
               rel="noopener noreferrer"
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block rounded-xl px-4 py-2.5 text-sm text-earthy-green transition-colors hover:bg-sage/20"
+              className="block rounded-xl px-4 py-3 text-sm text-earthy-green transition-colors hover:bg-sage/20"
             >
               {item.name}
             </a>

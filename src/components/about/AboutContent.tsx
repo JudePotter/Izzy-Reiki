@@ -74,6 +74,7 @@ export function AboutContent() {
           rotate={20}
           opacity={0.55}
           colorToken="rose"
+          hideOnMobile
         />
         <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
@@ -108,6 +109,7 @@ export function AboutContent() {
                 src="/images/F4DC7E20-3502-4012-9B15-FF3472DB27AA_1_201_a.jpeg"
                 alt="Izzy in her treatment room"
                 fill
+                priority
                 sizes="(min-width: 768px) 50vw, 90vw"
                 className="object-cover object-[52%_center]"
               />
