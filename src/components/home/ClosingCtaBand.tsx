@@ -40,7 +40,7 @@ export function ClosingCtaBand() {
         <Reveal delay={0.25}>
           <div className="mt-8">
             <Button href={whatsAppUrl(siteConfig.whatsapp.consultationMessage)}>
-              Book a free consultation
+              Book via WhatsApp
             </Button>
           </div>
         </Reveal>

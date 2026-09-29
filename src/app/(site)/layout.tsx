@@ -1,6 +1,5 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { DraftNotice } from "@/components/layout/DraftNotice";
 import { StickyWhatsApp } from "@/components/layout/StickyWhatsApp";
 import { siteConfig } from "@/content/site-config";
 
@@ -73,7 +72,6 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <DraftNotice />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

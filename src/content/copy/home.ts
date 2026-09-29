@@ -14,7 +14,7 @@ export const homeCopy = {
     eyebrow: "Clophill, Bedfordshire, UK",
     headingLine1: "Creating space for people",
     headingLine2: "to be held, healed and heard.",
-    subhead: "Complementary therapist and reiki master",
+    subhead: "Complementary Therapist and Reiki Master",
     primaryCta: "Book on WhatsApp",
     secondaryCta: "Learn more",
   },
@@ -34,11 +34,11 @@ export const homeCopy = {
     ctaLabel: "View all packages",
   },
   whyChooseUs: {
-    heading: "Why choose us",
+    heading: "Why choose me",
     items: [
       {
-        title: "We begin with intention, not just treatment.",
-        body: "Right from the very beginning, we take a moment to turn inwards and connect with what you need.",
+        title: "I begin with intention, not just treatment.",
+        body: "Right from the very beginning, I take a moment to turn inwards and connect with what you need.",
       },
       {
         title: "Permission to slow down.",

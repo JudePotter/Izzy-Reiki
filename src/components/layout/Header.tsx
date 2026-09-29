@@ -9,7 +9,8 @@ const navLinks = [
   { href: "/services", label: "Treatments" },
   { href: "/corporate", label: "Corporate" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "Journal" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {

@@ -15,7 +15,7 @@ export function StickyWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Message Divine Align Healing on WhatsApp"
-      className="fixed right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-earthy-green/20"
+      className="fixed right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-espresso text-white shadow-lg shadow-earthy-green/20 transition-colors duration-300 hover:bg-espresso-light"
       style={{ bottom: "calc(1.25rem + env(safe-area-inset-bottom))" }}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
@@ -23,16 +23,9 @@ export function StickyWhatsApp() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
     >
-      <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden>
-        <path
-          d="M12 3a9 9 0 0 0-7.75 13.5L3 21l4.65-1.22A9 9 0 1 0 12 3Z"
-          stroke="currentColor"
-          strokeWidth="1.3"
-        />
-        <path
-          d="M8.5 8.8c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .5.4.2.4.6 1.4.6 1.5.1.1.1.3 0 .4-.1.2-.2.3-.3.4-.1.1-.3.3-.4.4-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.2.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.4.2.5.3.1.1.1.7-.2 1.3-.2.6-1.4 1.2-1.9 1.2-.5 0-1.1.1-3.5-1-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3Z"
-          fill="currentColor"
-        />
+      <svg viewBox="0 0 48 48" fill="currentColor" className="h-7 w-7" aria-hidden>
+        <path d="M38.9,8.1A20.9,20.9,0,0,0,3.2,22.8,19.8,19.8,0,0,0,6,33.2L3,44l11.1-2.9a20.3,20.3,0,0,0,10,2.5A20.8,20.8,0,0,0,38.9,8.1Zm-14.8,32a17.1,17.1,0,0,1-9.5-2.8L8,39.1l1.8-6.4a17.9,17.9,0,0,1-3.1-9.9A17.4,17.4,0,1,1,24.1,40.1Z" />
+        <path d="M33.6,27.2A29.2,29.2,0,0,0,30,25.5c-.4-.2-.8-.3-1.1.2s-1.4,1.7-1.7,2.1a.8.8,0,0,1-1.1.1,15.2,15.2,0,0,1-4.2-2.6A15,15,0,0,1,19,21.7a.7.7,0,0,1,.2-1l.8-1a3.5,3.5,0,0,0,.5-.8.9.9,0,0,0,0-.9c-.2-.3-1.2-2.8-1.6-3.9s-.9-.9-1.2-.9h-1a1.7,1.7,0,0,0-1.4.7,5.5,5.5,0,0,0-1.8,4.3,10.4,10.4,0,0,0,2.1,5.4c.3.3,3.7,5.6,8.9,7.8a16.4,16.4,0,0,0,3,1.1,6.4,6.4,0,0,0,3.3.2c1-.1,3.1-1.2,3.5-2.4s.5-2.3.3-2.5A2.1,2.1,0,0,0,33.6,27.2Z" />
       </svg>
     </motion.a>
   );
