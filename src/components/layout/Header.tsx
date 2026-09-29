@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/content/site-config";
 import { AnimatedLogo } from "@/components/layout/AnimatedLogo";
 import { BookNowMenu } from "@/components/layout/BookNowMenu";
+import { MobileNavMenu } from "@/components/layout/MobileNavMenu";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -29,7 +30,7 @@ export function Header() {
               height={40}
               className="h-10 w-10 rounded-full object-cover"
             />
-            <span className="font-display text-lg tracking-wide text-earthy-green">
+            <span className="hidden font-display text-lg tracking-wide text-earthy-green sm:inline">
               {siteConfig.businessName}
             </span>
           </AnimatedLogo>
@@ -48,23 +49,11 @@ export function Header() {
           ))}
         </nav>
 
-        <BookNowMenu className="text-xs sm:text-sm" />
+        <div className="flex items-center gap-2 sm:gap-0">
+          <BookNowMenu className="text-xs sm:text-sm" />
+          <MobileNavMenu links={navLinks} className="sm:hidden" />
+        </div>
       </div>
-
-      {/* Mobile nav — simple inline row under the header bar, no menu/JS needed
-          at this size. Wraps rather than scrolling/overflowing now that six
-          links no longer fit on one line at 360–414px. */}
-      <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 border-t border-earthy-green/10 px-4 py-1 sm:hidden">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="px-1 py-3.5 text-xs tracking-wide text-earthy-green/80"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
     </header>
   );
 }
