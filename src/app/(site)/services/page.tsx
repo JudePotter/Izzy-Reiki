@@ -8,9 +8,11 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 import { Botanical } from "@/components/ui/Botanical";
 
 export const metadata = buildMetadata({
-  title: "Reiki, Massage & Reflexology Treatments",
+  title: "Reiki, Massage & Reflexology in Clophill",
   description: `Reiki, holistic massage and reflexology prices and packages with ${siteConfig.practitionerName} at ${siteConfig.businessName} — serving ${siteConfig.location.town} and mid-Bedfordshire.`,
   path: "/services",
+  image: "/images/og/services.jpg",
+  imageAlt: "Izzy giving a reflexology treatment",
 });
 
 export default function ServicesPage() {

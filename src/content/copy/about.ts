@@ -1,6 +1,6 @@
 /**
  * Copy for the About page. `story` and `credential` are Izzy's own words /
- * facts, verbatim from Divine-Align-Healing-Copy.md ("Her story"). The
+ * facts, verbatim from docs/Divine-Align-Healing-Copy.md ("Her story"). The
  * approach section reuses her "What makes her different" points (also
  * verbatim, shared with the homepage Why Choose Us block) since the copy
  * doc doesn't give separate wording for "approach" — this is real copy
@@ -19,6 +19,6 @@ export const aboutCopy = {
   credentials: [
     "Level 3 Diploma in Body Massage",
     "Level 3 Diploma in Reflexology",
-    "Certified Reiki Master, trained all three levels in Ubud, Bali",
+    "Certified Reiki Master - levels 1, 2 & 3 in Ubud, Bali",
   ],
 } as const;

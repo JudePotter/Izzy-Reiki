@@ -7,9 +7,10 @@ import { BlogCard } from "@/components/blog/BlogCard";
 import { Botanical } from "@/components/ui/Botanical";
 
 export const metadata = buildMetadata({
-  title: "Blog",
+  title: "Reiki & Wellbeing Blog",
   description: `Reiki, rest and wellbeing notes from ${siteConfig.practitionerName} at ${siteConfig.businessName} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
   path: "/blog",
+  image: "/images/og/blog.jpg",
 });
 
 export default function BlogIndexPage() {

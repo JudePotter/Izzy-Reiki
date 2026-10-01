@@ -106,7 +106,7 @@ export function AboutContent() {
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
               <Image
-                src="/images/F4DC7E20-3502-4012-9B15-FF3472DB27AA_1_201_a.jpeg"
+                src="/images/about/izzy-treatment-room.jpg"
                 alt="Izzy in her treatment room"
                 fill
                 priority

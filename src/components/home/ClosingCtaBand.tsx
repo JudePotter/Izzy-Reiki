@@ -20,7 +20,7 @@ export function ClosingCtaBand() {
     <Section bg="dark" className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/trees.jpeg"
+          src="/images/backgrounds/palm-path.jpeg"
           alt=""
           fill
           sizes="100vw"

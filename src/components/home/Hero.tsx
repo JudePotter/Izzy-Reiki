@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrushReveal } from "@/components/ui/BrushReveal";
 import { HeroParallaxImage } from "@/components/home/HeroParallaxImage";
+import { ScrollHint } from "@/components/home/ScrollHint";
 
 export function Hero() {
   const { hero } = homeCopy;
@@ -55,6 +56,8 @@ export function Hero() {
           </div>
         </Reveal>
       </div>
+
+      <ScrollHint />
     </section>
   );
 }

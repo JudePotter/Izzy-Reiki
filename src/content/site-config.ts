@@ -18,9 +18,18 @@ export const siteConfig = {
     country: "GB",
     addressLine: "2–3 Sycamore Barn, Northfield Farm, Great Lane",
     postcode: "MK45 4DD",
-    // Not supplied — leave out of JSON-LD until Izzy confirms exact coordinates.
-    geo: undefined as { lat: number; lng: number } | undefined,
+    // The pin on Izzy's Google Maps listing — the same place the Contact page's
+    // map embed points at. Feeds the LocalBusiness JSON-LD and geo meta tags.
+    geo: { lat: 52.0475, lng: -0.4144 },
   },
+
+  // Nearby places clients travel from. Feeds the LocalBusiness `areaServed` so
+  // searches like "reflexology near Ampthill" have something to match. Edit
+  // freely — only list places that are genuinely realistic for clients.
+  nearbyAreas: ["Ampthill", "Flitwick", "Silsoe", "Shefford", "Barton-le-Clay", "Bedford", "Luton"],
+
+  // Single-treatment prices run £45–£120 across treatments and packages.
+  priceRange: "££",
 
   // Weekly opening hours, from the copy doc — shown in the footer and wired
   // into the LocalBusiness `openingHoursSpecification`.

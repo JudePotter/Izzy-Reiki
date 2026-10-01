@@ -8,10 +8,11 @@ import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { Botanical } from "@/components/ui/Botanical";
 
 export const metadata = buildMetadata({
-  title: "Gallery",
+  title: "Gallery of Work in Clophill",
   description: `A look at the treatment space and Reiki, massage and reflexology sessions behind ${siteConfig.businessName} in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
   path: "/gallery",
-  image: "/images/969100C0-56DB-484F-949D-40A2ECDABBDE_1_201_a.jpeg",
+  image: "/images/og/gallery.jpg",
+  imageAlt: "Izzy's calm, candlelit treatment room",
 });
 
 export default function GalleryPage() {

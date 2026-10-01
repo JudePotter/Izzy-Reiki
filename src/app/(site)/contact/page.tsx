@@ -8,10 +8,11 @@ import { Botanical } from "@/components/ui/Botanical";
 import { ClosingCtaBand } from "@/components/home/ClosingCtaBand";
 
 export const metadata = buildMetadata({
-  title: "Contact",
-  description: `Get in touch with ${siteConfig.practitionerName} at ${siteConfig.businessName}, inside Renume Wellness in ${siteConfig.location.town}, ${siteConfig.location.region}.`,
+  title: "Contact & Booking in Clophill",
+  description: `Message ${siteConfig.practitionerName} on WhatsApp or use the enquiry form to book Reiki, reflexology or massage at ${siteConfig.businessName}, inside Renume Wellness, ${siteConfig.location.town}, ${siteConfig.location.region}.`,
   path: "/contact",
-  image: "/images/renume.webp",
+  image: "/images/og/contact.jpg",
+  imageAlt: "Renume Wellness in Clophill, where Divine Align Healing is based",
 });
 
 export default function ContactPage() {
@@ -42,8 +43,7 @@ export default function ContactPage() {
             </h1>
           </BrushReveal>
           <p className="mt-6 text-base font-light leading-relaxed text-earthy-green/80">
-            I work from Renume Wellness in {siteConfig.location.town}. Message
-            me on WhatsApp any time, or find the space below.
+            Message me on WhatsApp or email me using the enquiry form below.
           </p>
         </Reveal>
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
           <Reveal>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] md:aspect-auto md:h-[480px] lg:h-[560px]">
               <Image
-                src="/images/renume.webp"
+                src="/images/location/renume-wellness.webp"
                 alt="Renume Wellness, the space Izzy works from in Clophill"
                 fill
                 sizes="(min-width: 768px) 50vw, 90vw"

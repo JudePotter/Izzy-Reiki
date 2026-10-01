@@ -17,10 +17,11 @@ import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 
 export const metadata = buildMetadata({
-  title: "Corporate Wellness Days",
-  description: `Bring wellbeing to your workplace with on-site reflexology, massage and reiki from ${siteConfig.practitionerName} at ${siteConfig.businessName}, serving ${siteConfig.location.town} and mid-Bedfordshire workplaces.`,
+  title: "Corporate Wellness Days in Bedfordshire",
+  description: `Bring wellbeing to your workplace with on-site reflexology, massage and reiki from ${siteConfig.practitionerName} at ${siteConfig.businessName}, serving mid-Bedfordshire.`,
   path: "/corporate",
-  image: "/corporate/5F08753D-2114-4E8C-9918-B720E32B8E55_1_105_c.jpeg",
+  image: "/images/og/corporate.jpg",
+  imageAlt: "Izzy giving a reflexology treatment in an office",
 });
 
 const brochureHref = "/corporate/divine-align-corporate-wellness.pdf";
@@ -80,7 +81,7 @@ export default function CorporatePage() {
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
               <Image
-                src="/corporate/5F08753D-2114-4E8C-9918-B720E32B8E55_1_105_c.jpeg"
+                src="/images/corporate/reflexology-office.jpeg"
                 alt="Izzy giving a reflexology treatment in an office setting"
                 fill
                 priority
@@ -177,7 +178,7 @@ export default function CorporatePage() {
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
               <Image
-                src="/corporate/F2F4A5F2-98D9-4E57-ACB9-21CB3B5B0EA5.png"
+                src="/images/corporate/massage-office.png"
                 alt="Izzy giving a massage treatment in an office setting"
                 fill
                 sizes="(min-width: 768px) 40vw, 90vw"
@@ -236,7 +237,7 @@ export default function CorporatePage() {
       <Section bg="dark" className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/trees.jpeg"
+            src="/images/backgrounds/palm-path.jpeg"
             alt=""
             fill
             sizes="100vw"

@@ -59,7 +59,7 @@ export function BookNowMenu({ className = "" }: { className?: string }) {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 z-30 mt-2 max-h-96 w-72 overflow-auto rounded-2xl border border-earthy-green/10 bg-white p-1.5 text-left shadow-xl shadow-earthy-green/15"
+          className="absolute right-0 z-30 mt-2 max-h-[calc(100dvh-5.5rem)] w-72 overflow-auto rounded-2xl border border-earthy-green/10 bg-white p-1.5 text-left shadow-xl shadow-earthy-green/15"
         >
           <a
             href={whatsAppUrl(siteConfig.whatsapp.consultationMessage)}

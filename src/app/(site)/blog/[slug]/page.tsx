@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
 import { siteConfig } from "@/content/site-config";
+import { buildArticleJsonLd, serializeJsonLd } from "@/lib/structured-data";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { mdxComponents } from "@/components/blog/mdx-components";
@@ -23,29 +24,47 @@ export async function generateMetadata({
   if (!post) return {};
 
   const url = `${siteConfig.url}/blog/${slug}`;
-  const images = post.frontmatter.coverImage ? [post.frontmatter.coverImage] : undefined;
+  // Posts without a cover fall back to the blog's share image.
+  const images = [{ url: post.frontmatter.coverImage ?? "/images/og/blog.jpg", alt: post.frontmatter.title }];
+  const shareTitle = `${post.frontmatter.title} — ${siteConfig.businessName}`;
+
+  // Search results cut titles off at ~60 characters and descriptions at ~155,
+  // so long post titles drop the "— Divine Align Healing" suffix and long
+  // excerpts are trimmed for the meta description (the full text still shows
+  // on the page and in the share card).
+  const fullTitle = `${post.frontmatter.title} — ${siteConfig.businessName}`;
+  const title = fullTitle.length > 65 ? { absolute: post.frontmatter.title } : post.frontmatter.title;
+  const description = trimToLength(post.frontmatter.excerpt, 155);
 
   return {
-    title: post.frontmatter.title,
-    description: post.frontmatter.excerpt,
+    title,
+    description,
     alternates: { canonical: url },
     openGraph: {
-      title: post.frontmatter.title,
-      description: post.frontmatter.excerpt,
+      title: shareTitle,
+      description,
       url,
       siteName: siteConfig.businessName,
       locale: "en_GB",
       images,
       type: "article",
       publishedTime: post.frontmatter.date,
+      authors: [siteConfig.practitionerName],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.frontmatter.title,
-      description: post.frontmatter.excerpt,
+      title: shareTitle,
+      description,
       images,
     },
   };
+}
+
+/** Trims at a word boundary and adds an ellipsis only if it had to cut. */
+function trimToLength(text: string, max: number) {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+  return `${clean.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
 }
 
 function safeGetPost(slug: string) {
@@ -72,6 +91,20 @@ export default async function BlogPostPage({
 
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(
+            buildArticleJsonLd({
+              slug,
+              title: frontmatter.title,
+              excerpt: frontmatter.excerpt,
+              date: frontmatter.date,
+              coverImage: frontmatter.coverImage,
+            }),
+          ),
+        }}
+      />
       <Section bg="white" innerClassName="pb-0 pt-16 sm:pt-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Link

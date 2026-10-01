@@ -25,7 +25,7 @@ export function StoryTeaser() {
         <Reveal>
           <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] md:mx-auto">
             <Image
-              src="/images/portrait-1.jpeg"
+              src="/images/home/izzy-story-portrait.jpeg"
               alt="Izzy, the practitioner behind Divine Align Healing"
               fill
               sizes="(min-width: 768px) 33vw, 90vw"

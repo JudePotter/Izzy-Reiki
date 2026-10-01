@@ -16,7 +16,7 @@ export function HeroParallaxImage() {
     <div ref={ref} className="absolute inset-0 overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 scale-110">
         <Image
-          src="/images/hero-crystals.jpeg"
+          src="/images/home/hero-crystals.jpeg"
           alt=""
           fill
           priority

@@ -38,17 +38,20 @@ export function Footer() {
   return (
     <footer id="site-footer" className="bg-earthy-green text-white">
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+        {/* The hours column is sized to its content (max-content floor) so
+            "12:00pm – 8:00pm" never wraps onto a second line, whatever the
+            window width. */}
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_minmax(max-content,1.3fr)_0.8fr_1fr] lg:gap-x-8">
           <div>
             <p className="font-display text-2xl">{siteConfig.businessName}</p>
             <p className="mt-3 max-w-xs text-sm text-white/75">
-              I&rsquo;m a complementary therapist and reiki master, based in{" "}
+              I&rsquo;m a Complementary Therapist and Reiki Master, based in{" "}
               {siteConfig.location.town}, {siteConfig.location.region}.
             </p>
           </div>
 
           <div>
-            <p className="text-sm tracking-wide text-white/60">Find us</p>
+            <p className="text-sm tracking-wide text-white/60">Find me</p>
             <p className="mt-3 max-w-[16rem] text-sm text-white/85">
               Inside Renume Wellness
               <br />
@@ -62,7 +65,7 @@ export function Footer() {
             <p className="text-sm tracking-wide text-white/60">Opening hours</p>
             <ul className="mt-3 space-y-1 text-sm text-white/85">
               {siteConfig.hours.map((row) => (
-                <li key={row.day} className="flex justify-between gap-4">
+                <li key={row.day} className="flex justify-between gap-6 whitespace-nowrap">
                   <span>{row.day}</span>
                   <span className="text-white/70">{row.hours}</span>
                 </li>

@@ -6,7 +6,7 @@
  * this file — see components/home/IntroSection.tsx.
  *
  * `whyChooseUs` and `storyTeaser.excerpt` ARE Izzy's own words, copied
- * verbatim from Divine-Align-Healing-Copy.md, not placeholder or Jude copy.
+ * verbatim from docs/Divine-Align-Healing-Copy.md, not placeholder or Jude copy.
  */
 
 export const homeCopy = {
